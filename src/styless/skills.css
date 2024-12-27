@@ -1,0 +1,50 @@
+.skills-container {
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .skill-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  .skill-icon {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .skill-info h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .progress-bar {
+    background-color: #4caf50;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: width 0.5s ease;
+  }
+
+  .skills-container h2{
+    font-family: "Anta", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  

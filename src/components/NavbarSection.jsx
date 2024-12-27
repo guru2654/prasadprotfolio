@@ -3,12 +3,30 @@ import signature from '../assests/guruprasad1.png'
 import { useState } from 'react'
 import '../styless/navbar.css'
 
-const NavbarSection = () => {
+const NavbarSection = ({ homeRef, aboutRef, projectsRef, skillsRef, contactRef }) => {
 
     const [navActive, setNavActive] = useState(false)
 
   const handleButtonClick=(section)=>{
     console.log(section)
+    if (section === 'home' && homeRef.current) {
+      homeRef.current.scrollIntoView({ behavior: 'smooth' });
+
+  }
+  else if (section === 'about' && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  } else if (section === 'projects' && projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+  } 
+  else if (section === 'skills' && skillsRef.current) {
+      skillsRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+  else if (section === 'contact' && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  } else {
+      // Provide clear error message for missing section
+      console.warn(`Section "${section}" not found. Please ensure it exists.`);
+  }
   }  
   const handlenavbarclick=()=>{
     setNavActive(!navActive)
